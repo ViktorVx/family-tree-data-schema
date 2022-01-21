@@ -1,0 +1,35 @@
+@startuml
+class Person {
+    String id;
+    String firstName
+    String lastName
+    String middleName
+    Gender gender
+    Date birthDate
+    Date deathDate
+    Person mother
+    Person father
+    String curriculumVitae
+}
+
+class Relation {
+    String id;
+    Person person
+    Person relatedToPerson
+    RelationType relationType
+}
+
+enum Gender {
+    MALE, FEMALE
+}
+
+enum RelationType {
+    CHILD, SPOUSE
+}
+
+Person   }- Gender
+Relation }- Person
+Relation }- Person
+Relation }- RelationType
+
+@enduml
