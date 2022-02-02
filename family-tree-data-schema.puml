@@ -3,6 +3,7 @@ class Person {
     String id;
     String firstName
     String lastName
+    String bornLastName
     String middleName
     Gender gender
     Date birthDate
